@@ -1,6 +1,14 @@
-interface IWeatherWidget {}
+import { getWeatherData } from 'hooks/openWeatherData'
 
-const WeatherWidget: React.FC<IWeatherWidget> = () => {
+interface IWeatherWidget {
+  city: string
+}
+
+const WeatherWidget: React.FC<IWeatherWidget> = ({ city }) => {
+  const { weatherData, isWeatherDataLoading } = getWeatherData(city)
+
+  console.log(weatherData, isWeatherDataLoading)
+
   return <div></div>
 }
 
