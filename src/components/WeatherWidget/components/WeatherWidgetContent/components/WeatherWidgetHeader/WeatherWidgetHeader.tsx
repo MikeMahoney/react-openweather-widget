@@ -18,7 +18,7 @@ const WeatherWidgetHeader: React.FC<IWeatherWidgetHeader> = ({
       </div>
       <div className='weather-widget-header__rhs'>
         <div className='weather-widget-header__time'>
-          {moment().format('MMM Do, hh:mm')}
+          {moment().format('MMM Do, HH:mm')}
         </div>
         <RefreshIcon
           className='weather-widget-header__refresh-icon'

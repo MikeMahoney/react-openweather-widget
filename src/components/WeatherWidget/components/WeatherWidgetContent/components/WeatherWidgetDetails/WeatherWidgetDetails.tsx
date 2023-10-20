@@ -11,15 +11,30 @@ const WeatherWidgetDetails: React.FC<IWeatherWidgetDetails> = ({
     <div className='weather-widget-details'>
       <ul>
         <li>
-          {`Feels like: ${details['feels_like']}`}&deg;{'C'}
-        </li>
-        <li>{`Humidity: ${details.humidity}`}</li>
-        <li>{`Pressure: ${details.pressure}`}</li>
-        <li>
-          {`Max Temp: ${details['temp_max']}`}&deg;{'C'}
+          <span>{'Feels like: '}</span>
+          <span>
+            {details['feels_like']}&deg;{'C'}
+          </span>
         </li>
         <li>
-          {`Min Temp: ${details['temp_min']}`}&deg;{'C'}
+          <span>{'Humidity: '}</span>
+          <span>{`${details.humidity}%`}</span>
+        </li>
+        <li>
+          <span>{'Pressure: '}</span>
+          <span>{`${details.pressure}hPa`}</span>
+        </li>
+        <li>
+          <span>{'Max Temp: '}</span>
+          <span>
+            {details['temp_max']}&deg;{'C'}
+          </span>
+        </li>
+        <li>
+          <span>{'Min Temp: '}</span>
+          <span>
+            {details['temp_min']}&deg;{'C'}
+          </span>
         </li>
       </ul>
     </div>

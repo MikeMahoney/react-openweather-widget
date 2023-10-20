@@ -6,6 +6,7 @@
   &__weather {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
     &__temperature {
       font-size: $font-size-temperature;
       display: flex;

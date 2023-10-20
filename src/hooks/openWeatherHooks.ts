@@ -58,3 +58,23 @@ export const getWeatherByLocation = ({ latitude, longitude }: TLocation) => {
 
   return { weather, isWeatherLoading, setIsWeatherLoading }
 }
+
+export const getForecastByLocation = ({ latitude, longitude }: TLocation) => {
+  const [forecast, setForecast] = useState<any>({})
+  const [isForecastLoading, setIsForecastLoading] = useState<boolean>(true)
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_KEY}`
+      )
+      .then((response) => {
+        if (response.data) {
+          setForecast(response.data)
+        }
+        setIsForecastLoading(false)
+      })
+  }, [])
+
+  return { forecast, isForecastLoading }
+}

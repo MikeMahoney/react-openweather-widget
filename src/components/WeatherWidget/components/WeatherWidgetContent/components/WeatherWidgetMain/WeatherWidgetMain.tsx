@@ -3,6 +3,7 @@ import WeatherWidgetIcon from 'components/WeatherWidget/components/WeatherWidget
 import WeatherWidgetCards from './components/WeatherWidgetCards/WeatherWidgetCards'
 import WeatherWidgetDetails from '../WeatherWidgetDetails/WeatherWidgetDetails'
 import Card from 'sharedComponents/Card/Card'
+import WeatherWidgetForecast from '../WeatherWidgetForecast/WeatherWidgetForecast'
 
 interface IWeatherWidgetMain {
   weather: any
@@ -28,6 +29,9 @@ const WeatherWidgetMain: React.FC<IWeatherWidgetMain> = ({
       <WeatherWidgetCards>
         <Card title='Details'>
           <WeatherWidgetDetails details={weather.main} />
+        </Card>
+        <Card title='5 Day Forecast'>
+          <WeatherWidgetForecast />
         </Card>
       </WeatherWidgetCards>
     </main>
