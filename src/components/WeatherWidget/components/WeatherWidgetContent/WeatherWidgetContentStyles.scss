@@ -1,0 +1,30 @@
+@use '../../../../_dimensions.scss' as *;
+@use '../../../../_colors.scss' as *;
+
+.weather-widget-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: white;
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    &__temperature {
+      font-size: $font-size-temperature;
+      display: flex;
+      align-items: center;
+    }
+    &__type {
+      display: flex;
+      align-items: center;
+    }
+    &__description {
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+      span:first-child {
+        font-size: $font-size-small;
+      }
+    }
+  }
+}

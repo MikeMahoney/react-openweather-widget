@@ -1,15 +1,38 @@
-import { getWeatherData } from 'hooks/openWeatherData'
+import { getLocationByCity } from 'hooks/openWeatherHooks'
+import WeatherWidgetContent from './components/WeatherWidgetContent/WeatherWidgetContent'
+import LocationContext from 'context/locationContext'
+import WeatherWidgetLoading from './components/WeatherWidgetLoading/WeatherWidgetLoading'
+import './WeatherWidgetStyles.scss'
+import moment from 'moment'
 
 interface IWeatherWidget {
   city: string
 }
 
 const WeatherWidget: React.FC<IWeatherWidget> = ({ city }) => {
-  const { weatherData, isWeatherDataLoading } = getWeatherData(city)
+  const { location, isLocationLoading } = getLocationByCity(city)
 
-  console.log(weatherData, isWeatherDataLoading)
+  // Check if its between 6pm and 6am
+  // If so, display a darker blue to represent night
+  const currentHour = moment().hour()
+  const classModifier =
+    currentHour > 18 && currentHour < 6
+      ? 'weather-widget--night'
+      : 'weather-widget--day'
 
-  return <div></div>
+  console.log(location, isLocationLoading)
+
+  return (
+    <div className={`weather-widget ${classModifier}`}>
+      {isLocationLoading ? (
+        <WeatherWidgetLoading title='Fetching location data' />
+      ) : (
+        <LocationContext.Provider value={location}>
+          <WeatherWidgetContent />
+        </LocationContext.Provider>
+      )}
+    </div>
+  )
 }
 
 export default WeatherWidget

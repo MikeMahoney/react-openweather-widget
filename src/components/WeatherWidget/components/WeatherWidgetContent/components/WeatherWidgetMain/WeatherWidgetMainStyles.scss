@@ -1,0 +1,27 @@
+@use '../../../../../../_dimensions.scss' as *;
+
+.weather-widget-main {
+  display: flex;
+  flex-direction: column;
+  &__weather {
+    display: flex;
+    justify-content: space-between;
+    &__temperature {
+      font-size: $font-size-temperature;
+      display: flex;
+      align-items: center;
+    }
+    &__type {
+      display: flex;
+      align-items: center;
+    }
+    &__description {
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+      span:first-child {
+        font-size: $font-size-small;
+      }
+    }
+  }
+}

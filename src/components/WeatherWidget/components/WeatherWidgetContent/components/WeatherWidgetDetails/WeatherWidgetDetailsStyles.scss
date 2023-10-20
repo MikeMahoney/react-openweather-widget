@@ -1,0 +1,15 @@
+@use '../../../../../../_dimensions.scss' as *;
+
+.weather-widget-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: white;
+  color: black;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,22 @@
+@use '../../../../../../_dimensions.scss' as *;
+
+.weather-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__name {
+    font-size: $font-size-title;
+  }
+  &__rhs {
+    display: flex;
+    gap: 10px;
+  }
+  &__refresh-icon {
+    &:hover {
+      cursor: pointer;
+      path {
+        fill: lightgray;
+      }
+    }
+  }
+}

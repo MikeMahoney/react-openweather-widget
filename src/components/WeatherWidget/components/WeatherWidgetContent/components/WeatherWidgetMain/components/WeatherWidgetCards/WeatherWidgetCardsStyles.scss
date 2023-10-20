@@ -1,0 +1,7 @@
+@use '../../../../../../../../_dimensions.scss' as *;
+
+.weather-widget-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
