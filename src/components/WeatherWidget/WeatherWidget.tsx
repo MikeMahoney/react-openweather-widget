@@ -21,8 +21,6 @@ const WeatherWidget: React.FC<IWeatherWidget> = ({ city }) => {
       ? 'weather-widget--night'
       : 'weather-widget--day'
 
-  console.log(location, isLocationLoading)
-
   return (
     <div className={`weather-widget ${classModifier}`}>
       {isLocationLoading ? (

@@ -63,8 +63,6 @@ const WeatherWidgetForecast: React.FC<IWeatherWidgetForecast> = () => {
     responsive: true
   }
 
-  console.log(isForecastLoading, data)
-
   const onClickTab = (index: number) => {
     setSelectedTabIndex(index)
   }

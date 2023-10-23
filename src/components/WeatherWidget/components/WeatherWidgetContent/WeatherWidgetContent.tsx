@@ -14,7 +14,6 @@ const WeatherWidgetContent: React.FC<IWeatherWidgetContent> = () => {
   const { weather, isWeatherLoading, setIsWeatherLoading, errorMessage } =
     getWeatherByLocation(location)
 
-  console.log(weather, isWeatherLoading)
   const onClickRefresh = () => {
     setIsWeatherLoading(true)
   }
