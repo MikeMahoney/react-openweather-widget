@@ -40,12 +40,12 @@ return (
 ```
 - Import the component from its directory, then include it in your React component JSX
 - A city string prop must be provided as the location of the weather data
-- The component has no set width so it fills the parent wrapper, set width on the wrapper if its required
+- The component has no set width so it fills the parent wrapper; set width on the wrapper if its required
 - The component displays the current weather information for the city provided
 - It also includes a line chart that can display the temperature forecasts for the next 5 days
-- The widget also displays a darker shed of blue between 6pm and 6am
+- The widget also displays a darker shade of blue between 6pm and 6am
 
 ## Notes
-- Ideally if the component was to be served from an npm repo there would be a 'apiKey' prop so users could use their own OpenWeather account but for the purpose of this app it's hardcoded
+- Ideally if the component was to be served from an npm repo there would be an 'apiKey' prop so users could use their own OpenWeather account but for the purpose of this app it's hardcoded
 - There are unfortunately 'any' types in the code for the OpenWeather data objects as it would take too much time to define them all and which values were needed wasn't initially clear. Ideally in a commercial app I would fully define these types based on the business requirements
-- The react-chartjs-2 line chart in the app isn't as responsive as I'd like it to be as its seems to only resize on a rerender, which has lead to the responsiveness of the cards to be a bit finicky when resizing by dragging the viewport. An 'overflow-x: auto' value was added as a quick solution as I was spending too long trying other chartjs users solutions. The mobile view should be viewable on a refresh after going into mobile view mode though.
+- The react-chartjs-2 line chart in the app isn't as responsive as I'd like it to be as its seems to only resize on a re-render, which has lead to the responsiveness of the cards to be a bit finicky when resizing by dragging the viewport. An 'overflow-x: auto' value was added as a quick solution as I was spending too long trying other chartjs users solutions. The mobile view should be viewable on a refresh after going into mobile view mode though.
