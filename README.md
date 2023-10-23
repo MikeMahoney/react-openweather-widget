@@ -48,4 +48,4 @@ return (
 ## Notes
 - Ideally if the component was to be served from an npm repo there would be a 'apiKey' prop so users could use their own OpenWeather account but for the purpose of this app it's hardcoded
 - There are unfortunately 'any' types in the code for the OpenWeather data objects as it would take too much time to define them all and which values were needed wasn't initially clear. Ideally in a commercial app I would fully define these types based on the business requirements
-- The react-chartjs-2 line chart in the app isn't as responsive as I'd like it to be as its seems to only resize on a rerender
+- The react-chartjs-2 line chart in the app isn't as responsive as I'd like it to be as its seems to only resize on a rerender, which has lead to the responsiveness of the cards to be a bit finicky when resizing by dragging the viewport. An 'overflow-x: auto' value was added as a quick solution as I was spending too long trying other chartjs users solutions. The mobile view should be viewable on a refresh after going into mobile view mode though.
