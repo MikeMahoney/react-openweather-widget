@@ -21,7 +21,7 @@ const WeatherWidgetContent: React.FC<IWeatherWidgetContent> = () => {
   return (
     <div className='weather-widget-content'>
       {isWeatherLoading ? (
-        <WeatherWidgetLoading title='Fetching temperature data...' />
+        <WeatherWidgetLoading title='Fetching weather data...' />
       ) : errorMessage ? (
         <WeatherWidgetError message={errorMessage} />
       ) : (
