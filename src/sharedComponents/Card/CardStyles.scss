@@ -3,9 +3,10 @@
 
 .card {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  border-radius: 3px;
   background-color: $color-orange;
+  min-width: 300px;
   &__header {
     display: flex;
     align-items: center;

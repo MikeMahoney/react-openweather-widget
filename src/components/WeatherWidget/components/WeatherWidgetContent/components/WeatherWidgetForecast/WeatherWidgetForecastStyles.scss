@@ -5,19 +5,16 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding: 10px;
   background-color: white;
   color: black;
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    &__chart {
       display: flex;
-      justify-content: space-between;
-      span:first-child {
-        color: $color-orange;
-      }
+      align-items: stretch;
+      justify-content: space-evenly;
     }
   }
 }

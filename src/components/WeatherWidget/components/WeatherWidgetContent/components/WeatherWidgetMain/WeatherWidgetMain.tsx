@@ -30,7 +30,7 @@ const WeatherWidgetMain: React.FC<IWeatherWidgetMain> = ({
         <Card title='Details'>
           <WeatherWidgetDetails details={weather.main} />
         </Card>
-        <Card title='5 Day Forecast'>
+        <Card>
           <WeatherWidgetForecast />
         </Card>
       </WeatherWidgetCards>

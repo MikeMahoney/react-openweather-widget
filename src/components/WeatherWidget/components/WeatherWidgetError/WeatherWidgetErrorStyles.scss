@@ -1,5 +1,13 @@
 .weather-widget-error {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  background-color: red;
+  color: white;
+  padding: 20px;
+  &__title {
+    font-weight: 800;
+  }
 }

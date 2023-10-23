@@ -5,12 +5,13 @@ import './WeatherWidgetContentStyles.scss'
 import WeatherWidgetLoading from '../WeatherWidgetLoading/WeatherWidgetLoading'
 import WeatherWidgetHeader from './components/WeatherWidgetHeader/WeatherWidgetHeader'
 import WeatherWidgetMain from './components/WeatherWidgetMain/WeatherWidgetMain'
+import WeatherWidgetError from '../WeatherWidgetError/WeatherWidgetError'
 
 interface IWeatherWidgetContent {}
 
 const WeatherWidgetContent: React.FC<IWeatherWidgetContent> = () => {
   const location = useContext(LocationContext)
-  const { weather, isWeatherLoading, setIsWeatherLoading } =
+  const { weather, isWeatherLoading, setIsWeatherLoading, errorMessage } =
     getWeatherByLocation(location)
 
   console.log(weather, isWeatherLoading)
@@ -21,7 +22,9 @@ const WeatherWidgetContent: React.FC<IWeatherWidgetContent> = () => {
   return (
     <div className='weather-widget-content'>
       {isWeatherLoading ? (
-        <WeatherWidgetLoading title='Fetching temperature data' />
+        <WeatherWidgetLoading title='Fetching temperature data...' />
+      ) : errorMessage ? (
+        <WeatherWidgetError message={errorMessage} />
       ) : (
         <Fragment>
           <WeatherWidgetHeader

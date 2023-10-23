@@ -2,8 +2,6 @@
 
 .weather-widget-details {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex: 1;
   padding: 10px;
   background-color: white;
@@ -12,6 +10,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: 100%;
     li {
       display: flex;
       justify-content: space-between;

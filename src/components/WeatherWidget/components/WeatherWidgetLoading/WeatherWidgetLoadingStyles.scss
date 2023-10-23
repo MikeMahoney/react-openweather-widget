@@ -1,7 +1,9 @@
 .weather-widget-loading {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
+  color: white;
   &__title {
     text-align: center;
   }
