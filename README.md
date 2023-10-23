@@ -11,7 +11,7 @@ Project is created with:
 - OpenWeather API
 - react-chartjs-2
 - lodash
-- momment
+- moment
 
 ## Setup
 
